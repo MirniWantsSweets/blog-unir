@@ -1,0 +1,25 @@
+title: Apuntes de Aplicaciones en Red
+description: Notas sobre HTTP, AJAX y diseño web
+lang: es
+
+theme: jekyll-theme-tactile
+
+baseurl: "/blog-unir"
+url: "https://mirniwantssweets.github.io"
+
+timezone: Europe/Madrid
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

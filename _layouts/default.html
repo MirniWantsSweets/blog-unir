@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'es' }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% seo %}
+</head>
+
+<body>
+  <a class="skip-link" href="#main_content">Saltar al contenido</a>
+
+  <div id="container">
+    <div class="inner">
+
+      <header>
+        <h1>{{ page.title | default: site.title }}</h1>
+        <p class="subtitle">{{ page.description | default: site.description }}</p>
+      </header>
+
+      <nav aria-label="Principal">
+        <a class="button" href="{{ '/' | relative_url }}" {% if page.url=='/' %} aria-current="page" {% endif
+          %}>Inicio</a>
+      </nav>
+
+      <hr>
+
+      <main id="main_content" tabindex="-1">
+        {% if page.collection == 'posts' %}
+        <p class="post-date">Publicado el {% include fecha.html date=page.date %}</p>
+        {% if page.image %}
+        <img class="post-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}" width="800"
+          height="450">
+        {% endif %}
+        {% endif %}
+
+        {{ content }}
+
+        {% if page.previous or page.next %}
+        <nav class="pager" aria-label="Más entradas">
+          {% comment %}In Jekyll, page.next is the NEWER post and page.previous is the OLDER one.{% endcomment %}
+          {% if page.next %}
+          <a class="button" href="{{ page.next.url | relative_url }}"><span class="pager-label">Entrada más
+              reciente</span>{{ page.next.title }}</a>
+          {% endif %}
+          {% if page.previous %}
+          <a class="button" href="{{ page.previous.url | relative_url }}"><span class="pager-label">Entrada
+              anterior</span>{{ page.previous.title }}</a>
+          {% endif %}
+        </nav>
+        {% endif %}
+      </main>
+
+      <footer>
+        © {{ site.time | date: "%Y" }} {{ site.title }}.<br>
+        Actividad 1 de Desarrollo de Aplicaciones en Red. Hecho con <a href="https://jekyllrb.com">Jekyll</a>
+        y el tema <a href="https://pages-themes.github.io/tactile/">Tactile</a> de GitHub Pages.
+      </footer>
+
+    </div>
+  </div>
+</body>
+
+</html>

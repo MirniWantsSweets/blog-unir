@@ -1,0 +1,13 @@
+---
+layout: default
+title: Apuntes de Aplicaciones en Red
+---
+{% for post in site.posts %}
+<article class="entry">
+  <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+  <p class="entry-date">{% include fecha.html date=post.date %}</p>
+  <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | escape }}" width="800" height="450" loading="lazy">
+  <p>{{ post.description }}</p>
+</article>
+{% unless forloop.last %}<hr>{% endunless %}
+{% endfor %}

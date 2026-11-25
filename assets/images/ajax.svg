@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6f7ef"/>
+      <stop offset="1" stop-color="#f8fdfb"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- Browser window -->
+  <rect x="60" y="60" width="480" height="330" rx="14" fill="#ffffff" stroke="#12263f" stroke-width="4"/>
+  <path d="M60 74a14 14 0 0 1 14-14h452a14 14 0 0 1 14 14v34H60z" fill="#12263f"/>
+  <circle cx="86" cy="84" r="7" fill="#ff6b6b"/>
+  <circle cx="108" cy="84" r="7" fill="#ffd166"/>
+  <circle cx="130" cy="84" r="7" fill="#06d6a0"/>
+  <rect x="160" y="74" width="340" height="20" rx="10" fill="#2c4262"/>
+  <!-- Static blocks -->
+  <g fill="#d5dde8">
+    <rect x="84" y="132" width="432" height="38" rx="8"/>
+    <rect x="84" y="190" width="120" height="170" rx="8"/>
+    <rect x="224" y="344" width="292" height="16" rx="8"/>
+  </g>
+  <!-- Updating block -->
+  <rect x="224" y="190" width="292" height="130" rx="8" fill="#ffe3cc" stroke="#b3541e" stroke-width="4" stroke-dasharray="12 8"/>
+  <g fill="#b3541e" font-family="Courier New, monospace" font-size="26" font-weight="700">
+    <text x="250" y="238">{ "datos": </text>
+    <text x="250" y="276">  "nuevos" }</text>
+  </g>
+  <!-- Database -->
+  <g stroke="#12263f" stroke-width="4" fill="#ffffff">
+    <path d="M610 200v110c0 22 38 38 85 38s85-16 85-38V200"/>
+    <ellipse cx="695" cy="200" rx="85" ry="30"/>
+  </g>
+  <path d="M610 255c0 22 38 38 85 38s85-16 85-38" fill="none" stroke="#12263f" stroke-width="4"/>
+  <!-- Arrow from database to block -->
+  <g stroke="#0b6e4f" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M600 255H546"/>
+    <path d="M556 235l-22 20 22 20"/>
+  </g>
+</svg>

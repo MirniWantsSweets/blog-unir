@@ -1,0 +1,4 @@
+{%- comment -%}Prints a date in Spanish. Usage: {% include fecha.html date=post.date %}{%- endcomment -%}
+{%- assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," -%}
+{%- assign indice = include.date | date: "%-m" | minus: 1 -%}
+<time datetime="{{ include.date | date: '%Y-%m-%d' }}">{{ include.date | date: "%-d" }} de {{ meses[indice] }} de {{ include.date | date: "%Y" }}</time>
